@@ -1,7 +1,7 @@
-package com.luise.ecommer.infrastructure.persistence;
+package com.luise.ecommer.entitys;
 
-import com.luise.ecommer.infrastructure.persistence.embeddables.DateAudit;
-import com.luise.ecommer.infrastructure.persistence.enums.Status;
+import com.luise.ecommer.entitys.embeddables.DateAudit;
+import com.luise.ecommer.entitys.enums.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

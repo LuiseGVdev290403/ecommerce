@@ -1,6 +1,6 @@
-package com.luise.ecommer.infrastructure.persistence;
+package com.luise.ecommer.entitys;
 
-import com.luise.ecommer.infrastructure.persistence.embeddables.DateAudit;
+import com.luise.ecommer.entitys.embeddables.DateAudit;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;

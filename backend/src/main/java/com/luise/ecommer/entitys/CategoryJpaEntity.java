@@ -1,4 +1,4 @@
-package com.luise.ecommer.infrastructure.persistence;
+package com.luise.ecommer.entitys;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
@@ -14,15 +14,15 @@ import java.util.HashSet;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "brand")
-public class BrandJpaEntity {
+@Table(name = "category")
+public class CategoryJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "brand_name", nullable = false)
+    @Column(name = "category_name", nullable = false)
     @Size(min = 5, max = 120, message = "el nombre debera ser mayor a 120 y minimo de 5")
-    private String  nameBrand;
+    private String  nameCategory;
 
-    @ManyToMany(mappedBy = "brandJpaEntity")
+    @ManyToMany(mappedBy = "catJpaEntity")
     private HashSet<ProductsJpaEntity> productsJpaEntities = new HashSet<>();
 }

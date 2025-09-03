@@ -1,7 +1,7 @@
-package com.luise.ecommer.infrastructure.persistence;
+package com.luise.ecommer.entitys;
 
-import com.luise.ecommer.infrastructure.persistence.embeddables.DateAudit;
-import com.luise.ecommer.infrastructure.persistence.enums.Status;
+import com.luise.ecommer.entitys.embeddables.DateAudit;
+import com.luise.ecommer.entitys.enums.Status;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Pattern;
@@ -27,7 +27,7 @@ public class UserJpaEntity {
     private String firstName;
     @Column(name = "last_name", nullable = false, length = 120)
     private String lastName;
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     @Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}",//valid from 2 characters or more
             flags = Pattern.Flag.CASE_INSENSITIVE,
             message = "this  email is not correct")

@@ -1,6 +1,6 @@
-package com.luise.ecommer.infrastructure.persistence;
+package com.luise.ecommer.entitys;
 
-import com.luise.ecommer.infrastructure.persistence.enums.Role;
+import com.luise.ecommer.entitys.enums.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

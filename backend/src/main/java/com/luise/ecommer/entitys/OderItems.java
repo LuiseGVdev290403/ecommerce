@@ -1,4 +1,4 @@
-package com.luise.ecommer.infrastructure.persistence;
+package com.luise.ecommer.entitys;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
