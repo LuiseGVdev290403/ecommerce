@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -24,5 +25,5 @@ public class CategoryJpaEntity {
     private String  nameCategory;
 
     @ManyToMany(mappedBy = "catJpaEntity")
-    private HashSet<ProductsJpaEntity> productsJpaEntities = new HashSet<>();
+    private Set<ProductsJpaEntity> productsJpaEntities = new HashSet<>();
 }

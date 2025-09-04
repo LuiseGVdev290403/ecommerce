@@ -12,7 +12,7 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/product").allowedOrigins("http://localhost:4200")
+                registry.addMapping("/api/**").allowedOrigins("http://localhost:4200")
                         .allowedMethods("GET", "POST", "DELETE", "UPDATE", "OPTIONS", "PUT");
             }
         };

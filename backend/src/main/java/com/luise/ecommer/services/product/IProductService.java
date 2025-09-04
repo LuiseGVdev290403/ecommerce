@@ -1,4 +1,4 @@
-package com.luise.ecommer.services;
+package com.luise.ecommer.services.product;
 
 import com.luise.ecommer.entitys.ProductsJpaEntity;
 import com.luise.ecommer.model.ProductDto;

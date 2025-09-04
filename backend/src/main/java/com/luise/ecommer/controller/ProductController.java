@@ -1,10 +1,8 @@
 package com.luise.ecommer.controller;
 
 
-import com.luise.ecommer.services.IProductService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.luise.ecommer.services.product.IProductService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +19,7 @@ public class ProductController {
 
 
     @GetMapping
-    public ResponseEntity<?> helloAdmin(){
+    public ResponseEntity<?> getProducts(){
         return ResponseEntity.ok(productService.findAll());
     }
 
