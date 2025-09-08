@@ -1,4 +1,3 @@
-import { DecimalPipe } from "@angular/common";
 
 
 export class Product {

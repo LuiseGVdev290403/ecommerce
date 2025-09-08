@@ -1,0 +1,12 @@
+<form>
+    <select name="category" (change)="sendProducts($event)" >
+    @if(categories!==null){
+        <option disabled selected>Selecciona categoria</option>
+            @for (item of categories; track item) {
+            <option value="{{item.id}}">{{item.nameCategory}}</option>
+        }
+    } @else {
+            <option>No hay categorias</option>
+        } 
+    </select>
+</form>

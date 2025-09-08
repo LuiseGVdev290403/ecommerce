@@ -1,6 +1,9 @@
 <div class="bg-white">
     <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 class="text-2xl font-bold tracking-tight text-gray-900">Productos</h2>
+        <div class="flex items-baseline justify-between border-b border-gray-200 pb-6">
+            <h2 class="text-2xl font-bold tracking-tight text-gray-900">Productos</h2>
+            <app-category (sendProduct)="getProductsByIdCategory($event)"/>
+        </div>
         @for (item of products; track item) {
         <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             <div class="group relative">
@@ -20,8 +23,8 @@
                
             </div>
         </div>
-        <button>
-                    Comprar ahora
+        <button class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-2 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
+            Comprar ahora
         </button>
         }
     </div>
